@@ -5,8 +5,16 @@
 const { count, head, tail } = require('../arrayHelpers.js');
 
 const filter = (predicateFn, array) => {
-  // TODO
+  if (array !== undefined && array.length > 0) {
+    const h = head(array);
+    const t = tail(array);
 
+    const okElements = predicateFn(h) ? [h] : [];
+
+    return okElements.concat(filter(predicateFn, t));
+  } else {
+    return [];
+  }
 }
 
 
