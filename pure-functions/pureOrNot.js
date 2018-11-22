@@ -3,16 +3,11 @@
 
 ////////////////
 
-
 const getDate = () => new Date().toDateString();
 
 const getWorkshopDate = () => new Date(2018, 7, 9).toDateString();
 
-
-
 ////////////////
-
-
 
 const jsonToObj = (filename) => {
   const fs = require('fs');
@@ -24,10 +19,7 @@ const objToJson = (object) => {
   return JSON.stringify(object, null, 2);
 }
 
-
-
 ////////////////
-
 
 const logicalXor = (A, B) => (A || B) && !(A && B);
 
@@ -49,9 +41,6 @@ const xorTruthTable = () => {
   console.log('\t-----\t|\t-----\t|\t-----');
   table.map(([A, B, result]) => console.log(`\t${A}\t|\t${B}\t|\t${logicalXor(A,B)}`));
 };
-
-
-
 
 ////////////////
 
