@@ -1,7 +1,6 @@
 'use strict';
 
 // NOTE: The functions in this module are for educational purposes, not high-performance production use!
-
 const { count, head, tail } = require('../arrayHelpers.js');
 
 const filter = (predicateFn, array) => {
@@ -30,7 +29,6 @@ const map = (mappingFn, array) => {
 
 
 const reduce = (reducerFn, initialValue, array) => {
-  // TODO
   // NOTE: many reduce implementations treat the initialValue argument as optional - here we'll require it, for simplicity
   if (count(array) === 0) return initialValue;
   return reduce(reducerFn, reducerFn(initialValue, head(array)), tail(array));
