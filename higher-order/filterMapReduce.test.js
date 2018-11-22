@@ -12,13 +12,11 @@ test('[filterMapReduce] filter: evens', (assert) => {
   assert.end();
 });
 
-
 test('[filterMapReduce] filter: odds', (assert) => {
   const odds = filter((n) => n%2 !== 0, wholes);
   assert.deepEqual(odds, [1, 3, 5, 7, 9]);
   assert.end();
 });
-
 
 test('[filterMapReduce] filter: greather than four', (assert) => {
   const greaterThanFour = filter((n) => n > 4, wholes);
@@ -56,7 +54,6 @@ test('[filterMapReduce] map: fizz buzz', (assert) => {
   assert.deepEqual(fizzBuzz, ['fizzbuzz', 1, 2, 'fizz', 4, 'buzz', 'fizz', 7, 8, 'fizz', 'buzz']);
   assert.end();
 });
-
 
 test('[filterMapReduce] reduce: sum', (assert) => {
   const sum = reduce((acc, val) => acc + val, 0, wholes);

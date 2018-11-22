@@ -17,8 +17,6 @@ const filter = (predicateFn, array) => {
   }
 }
 
-
-
 const map = (mappingFn, array) => {
   if (count(array) === 0) {
     return [];
@@ -26,7 +24,7 @@ const map = (mappingFn, array) => {
 
   const h = head(array);
   const t = tail(array);
-  return [mappingFn(h)].concat(map(t))
+  return [mappingFn(h)].concat(map(mappingFn, t))
 };
 
 
