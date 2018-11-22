@@ -26,8 +26,6 @@ const map = (mappingFn, array) => {
   return [mappingFn(h)].concat(map(mappingFn, t))
 };
 
-
-
 const reduce = (reducerFn, initialValue, array) => {
   // NOTE: many reduce implementations treat the initialValue argument as optional - here we'll require it, for simplicity
   if (count(array) === 0) return initialValue;
