@@ -20,8 +20,13 @@ const filter = (predicateFn, array) => {
 
 
 const map = (mappingFn, array) => {
-  // TODO
+  if (count(array) === 0) {
+    return [];
+  }
 
+  const h = head(array);
+  const t = tail(array);
+  return [mappingFn(h)].concat(map(t))
 };
 
 
